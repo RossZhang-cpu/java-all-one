@@ -36,6 +36,7 @@ public class NIOClient {
     }
 
     public static void main(String[] args) {
-        new NIOClient().startClient();
+//        new NIOClient().startClient();
+        System.out.println(300000 / 7.3202 * (1.041) * 7.28);
     }
 }

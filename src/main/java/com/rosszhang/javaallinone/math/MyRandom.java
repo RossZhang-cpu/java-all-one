@@ -1,10 +1,14 @@
 package com.rosszhang.javaallinone.math;
 
+import com.rosszhang.javaallinone.myenum.MyEnum;
+
 import java.util.Random;
 
 public class MyRandom {
 
     public static void main(String[] args) {
+
+        new MyEnum.Test();
         // First sequence
         Random rand1 = new Random(123); // Set seed to 123
         for(int i = 0; i < 5; i++) {
