@@ -2,6 +2,7 @@ package com.rosszhang.javaallinone.concurrency;
 
 
 import java.util.Hashtable;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Foo {
@@ -40,8 +41,8 @@ public class Foo {
     }
 
     public static void main(String[] args) {
-        new Hashtable<>();
-        new ThreadLocal<>();
+        ConcurrentHashMap<Object, Object> hashMap = new ConcurrentHashMap<>();
+        hashMap.put(null, null);
 
     }
 }
