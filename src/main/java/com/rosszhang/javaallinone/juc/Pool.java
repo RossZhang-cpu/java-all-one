@@ -1,4 +1,4 @@
-package com.rosszhang.javaallinone.concurrency;
+package com.rosszhang.javaallinone.juc;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

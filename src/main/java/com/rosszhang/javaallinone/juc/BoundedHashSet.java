@@ -1,4 +1,4 @@
-package com.rosszhang.javaallinone.synchronizer;
+package com.rosszhang.javaallinone.juc;
 
 import java.util.Collections;
 import java.util.HashSet;

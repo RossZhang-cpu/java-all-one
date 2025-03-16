@@ -14,10 +14,9 @@ public class NoVisibility {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         new ReaderThread().start();
         number = 42;
-        ++number;
         ready = true;
     }
 }

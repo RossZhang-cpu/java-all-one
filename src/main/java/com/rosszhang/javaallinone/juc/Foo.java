@@ -1,4 +1,4 @@
-package com.rosszhang.javaallinone.concurrency;
+package com.rosszhang.javaallinone.juc;
 
 
 import java.util.Hashtable;

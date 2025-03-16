@@ -1,4 +1,4 @@
-package com.rosszhang.javaallinone.synchronizer;
+package com.rosszhang.javaallinone.juc.lock;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -36,7 +36,6 @@ public class MyCountDownLatch {
         thread2.start();
         thread3.start();
         countDownLatch.await();
-        countDownLatch.await();
     }
 
     private static synchronized void pickPresent(Random random, List<String> list, CountDownLatch countDownLatch) {
@@ -48,7 +47,7 @@ public class MyCountDownLatch {
         int i = random.nextInt(list.size());
         log.info("index is {}", i);
         String remove = list.remove(i);
-        log.info("Current Thread {} present {}", Thread.currentThread().getName(), remove);
+        log.info("Current Thread {} present: {}", Thread.currentThread().getName(), remove);
         countDownLatch.countDown();
     }
 }

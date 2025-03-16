@@ -1,11 +1,11 @@
-package com.rosszhang.javaallinone.concurrency;
+package com.rosszhang.javaallinone.juc;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class Reentrantlock {
 
-    public static void main(String[] args) throws InterruptedException {
+    public void main(String[] args) throws InterruptedException {
         Thread thread01 = new Thread(new addThread01());
         Thread thread02 = new Thread(new decThread01());
         thread01.start();

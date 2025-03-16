@@ -1,4 +1,4 @@
-package com.rosszhang.javaallinone.threadpool;
+package com.rosszhang.javaallinone.juc;
 
 import org.springframework.web.client.RestTemplate;
 

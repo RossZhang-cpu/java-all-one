@@ -1,9 +1,8 @@
-package com.rosszhang.javaallinone.synchronizer;
+package com.rosszhang.javaallinone.juc.lock;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Phaser;
@@ -21,8 +20,7 @@ public class MyPhaser {
             executor.submit(new Task(phaser));
             executor.submit(new Task(phaser));
             executor.submit(new Task(phaser));
-
-            int p = phaser.awaitAdvance(0);
+            int p = phaser.awaitAdvance(phaser.getPhase());
             log.info("phase is {}", p);
         }
 
@@ -41,8 +39,8 @@ public class MyPhaser {
         @Override
         public void run() {
             //do something
-            phaser.arrive();
             log.info("Thread {} arrived", Thread.currentThread().getName());
+            phaser.arrive();
         }
     }
 }

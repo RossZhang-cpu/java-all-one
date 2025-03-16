@@ -1,4 +1,4 @@
-package com.rosszhang.javaallinone.concurrency;
+package com.rosszhang.javaallinone.juc;
 
 
 import java.util.ArrayList;
@@ -10,9 +10,11 @@ public class MyThread extends Thread {
 
         @Override
         public synchronized  void run() {
-            super.run();
-            count--;
-            System.out.println("由 " + MyThread.currentThread().getName() + " 计算，count=" + count);
+            synchronized (this) {
+                super.run();
+                count--;
+                System.out.println("由 " + MyThread.currentThread().getName() + " 计算，count=" + count);
+            }
         }
 
     public static void main(String[] args) {

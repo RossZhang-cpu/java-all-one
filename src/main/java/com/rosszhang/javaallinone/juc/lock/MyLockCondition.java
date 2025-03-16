@@ -1,4 +1,4 @@
-package com.rosszhang.javaallinone.lock;
+package com.rosszhang.javaallinone.juc.lock;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.locks.Condition;
